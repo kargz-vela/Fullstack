@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Skizaa Banaa | Checkout</title>
+    <script src="https://kit.fontawesome.com/61f7061301.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="imgs/Logo main.png" class="logo" alt="Skizaa Banaa logo"></a>
+
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+        </button>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link" aria-label="View cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-header shop-header">
+        <div>
+            <h2>#checkout</h2>
+            <p>Complete your order</p>
+        </div>
+    </section>
+
+    <section class="section-p1 checkout-page">
+        <div class="checkout-grid">
+            <div class="checkout-form-card">
+                <div class="checkout-header-row">
+                    <div>
+                        <span class="eyebrow">Delivery</span>
+                        <h3>Delivery Details</h3>
+                    </div>
+                </div>
+
+                <div class="delivery-options" aria-label="Delivery options">
+                    <label class="delivery-option selected">
+                        <input type="radio" name="deliveryMethod" value="Standard" checked>
+                        <span>
+                            <strong>Standard</strong>
+                            <small>2-4 days</small>
+                        </span>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="deliveryMethod" value="Express">
+                        <span>
+                            <strong>Express</strong>
+                            <small>24-48 hours</small>
+                        </span>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="deliveryMethod" value="Pickup">
+                        <span>
+                            <strong>Pickup</strong>
+                            <small>Nairobi CBD pickup</small>
+                        </span>
+                    </label>
+                </div>
+
+                <form class="checkout-form">
+                    <div class="form-row two-cols">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+
+                    <input type="email" name="email" placeholder="Email Address" required>
+
+                    <div class="form-row one-col">
+                        <select name="county" id="county-select" required>
+                            <option value="">Select County</option>
+                            <option value="Nairobi">Nairobi</option>
+                            <option value="Mombasa">Mombasa</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Nakuru">Nakuru</option>
+                            <option value="Kisumu">Kisumu</option>
+                            <option value="Machakos">Machakos</option>
+                            <option value="Kakamega">Kakamega</option>
+                            <option value="Meru">Meru</option>
+                            <option value="Nyeri">Nyeri</option>
+                            <option value="Uasin Gishu">Uasin Gishu</option>
+                            <option value="Kisii">Kisii</option>
+                            <option value="Nandi">Nandi</option>
+                            <option value="Murang'a">Murang'a</option>
+                            <option value="Laikipia">Laikipia</option>
+                            <option value="Makueni">Makueni</option>
+                            <option value="Tharaka Nithi">Tharaka Nithi</option>
+                            <option value="Kajiado">Kajiado</option>
+                            <option value="Baringo">Baringo</option>
+                            <option value="Kericho">Kericho</option>
+                            <option value="Embu">Embu</option>
+                            <option value="Busia">Busia</option>
+                            <option value="Nyamira">Nyamira</option>
+                            <option value="Kilifi">Kilifi</option>
+                            <option value="Kwale">Kwale</option>
+                            <option value="Taita Taveta">Taita Taveta</option>
+                            <option value="Turkana">Turkana</option>
+                            <option value="Garissa">Garissa</option>
+                            <option value="Wajir">Wajir</option>
+                            <option value="Mandera">Mandera</option>
+                            <option value="Marsabit">Marsabit</option>
+                            <option value="Samburu">Samburu</option>
+                            <option value="West Pokot">West Pokot</option>
+                            <option value="Bomet">Bomet</option>
+                            <option value="Siaya">Siaya</option>
+                            <option value="Homa Bay">Homa Bay</option>
+                            <option value="Migori">Migori</option>
+                            <option value="Kitui">Kitui</option>
+                        </select>
+                    </div>
+
+                    <textarea name="address" placeholder="Street name, estate, building, apartment number" required></textarea>
+                    <input type="text" name="landmark" placeholder="Landmark (optional)">
+                    <textarea name="deliveryNotes" placeholder="Additional delivery information (e.g. gate code, delivery instructions, preferred time)"></textarea>
+                    <button type="submit" class="normal">Place Order</button>
+                </form>
+            </div>
+
+            <aside class="checkout-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items" class="checkout-items"></div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <strong id="checkout-delivery-fee">Ksh100</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="checkout-total">Ksh0</strong>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="imgs/Logo.png" alt="Skizaa Banaa logo footer">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 562 Ngong Road, street 12, Nairobi</p>
+            <p><strong>Phone:</strong> *****************</p>
+            <p><strong>Hours:</strong> 10:00 - 19:00 Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        <p>© 2026, Skizaa Banaa - All Rights Reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

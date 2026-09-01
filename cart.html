@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Skizaa Banaa | Cart</title>
+    <script src="https://kit.fontawesome.com/61f7061301.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="imgs/Logo main.png" class="logo" alt="Skizaa Banaa logo"></a>
+
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+        </button>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link" aria-label="View cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-header shop-header">
+        <div>
+            <h2>#yourcart</h2>
+            <p>Review your selections before checkout</p>
+        </div>
+    </section>
+
+    <section class="section-p1 cart-page">
+        <div class="cart-layout">
+            <div class="cart-items-wrap">
+                <div class="cart-items-header">
+                    <h3>Products</h3>
+                    <h3>Price</h3>
+                    <h3>Qty</h3>
+                    <h3>Total</h3>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+            </div>
+
+            <aside class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">Ksh0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <strong id="delivery-fee">Ksh0</strong>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="total">Ksh0</strong>
+                </div>
+                <p id="checkout-message" class="checkout-message">Add an item to continue to checkout.</p>
+                <button id="checkout-button" class="normal checkout-btn" type="button">Proceed to Checkout</button>
+            </aside>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get Email updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form class="newsletter-form">
+            <input type="email" name="newsletterEmail" placeholder="Your Email Address" required>
+            <button type="submit" class="normal">Sign Up</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="imgs/Logo.png" alt="Skizaa Banaa logo footer">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 562 Ngong Road, street 12, Nairobi</p>
+            <p><strong>Phone:</strong> *****************</p>
+            <p><strong>Hours:</strong> 10:00 - 19:00 Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        <p>© 2026, Skizaa Banaa - All Rights Reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
